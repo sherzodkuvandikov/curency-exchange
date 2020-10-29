@@ -1,28 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ux">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>bootstrap starter</title>
+  <title>Exchanger</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-  <form class="currency-form form-group w-50 mr-auto ml-auto mt-4 p-2 border-dark" action="https:/echo.htmlacademy.ru" method="POST">
+  <form class="currency-form bg-white form-group w-50 mr-auto ml-auto mt-4 p-4 rounded-lg border-dark" action="https:/echo.htmlacademy.ru" method="POST">
     <div class="form-items d-flex">
-      <input class="form__item form-control" type="number" placeholder="input your amount" required>
+      <input class="money-amount form__item form-control" type="number" step="any" placeholder="Input your amount" required>
 
-      <select class="form__item form-control " name="currencyType" id="currencyType">
+      <select class="currency-type form__item form-control " name="currencyType" id="currencyType">
+        <option value="" disabled selected>Choose option</option>
         <option value="10343.23">USD</option>
         <option value="1300.32">EURO</option>
         <option value="139">RUB</option>
       </select>
 
-      <input class="form__item form-control" type="text" readonly disabled>
+      <input class="currency-out form__item form-control" type="text" readonly>
     </div>
-    <button class="btn btn-primary mr-auto ml-auto d-block" type="submit">SUBMIT</button>
+    <div class="btn__wrapper d-xl-flex justify-content-between">
+      <button class="currency-btn btn btn-success d-block w-100" type="submit">SUBMIT</button>
+      <input class="btn btn-danger" type="reset">
+    </div>
   </form>
 
   <script src="js/jquery-3.5.1.min.js"></script>
